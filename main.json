@@ -1,6 +1,7 @@
 [
 	{
 		"name": "composer",
+		"version": "1.8.5",
 		"prerequisites": [
 			{
 				"type": "command_not_found",
@@ -10,27 +11,16 @@
 		"install": [
 			{
 				"type": "download",
-				"target": "installer",
-				"url": "https://getcomposer.org/installer"
-			},
-			{
-				"type": "shell_exec",
-				"value": "php installer --quiet"
-			},
-			{
-				"type": "delete",
-				"file": "installer"
+				"target": "composer.phar",
+				"url": "https://getcomposer.org/download/1.8.5/composer.phar",
+				"hash": {
+					"sha256": "4e4c1cd74b54a26618699f3190e6f5fc63bb308b13fa660f71f2a2df047c0e17"
+				}
 			},
 			{
 				"type": "keep",
 				"file": "composer.phar",
 				"as": "composer.phar"
-			}
-		],
-		"update": [
-			{
-				"type": "shell_exec",
-				"value": "composer self-update"
 			}
 		],
 		"shortcuts": {
