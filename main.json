@@ -45,9 +45,60 @@
 		}
 	},
 	{
+		"name": "maven",
+		"aliases": [
+			"mvn"
+		],
+		"version": "3.6.1",
+		"prerequisites": [
+			{
+				"type": "command_not_found",
+				"value": "mvn"
+			}
+		],
+		"dependencies": [
+			"openjdk"
+		],
+		"install": [
+			{
+				"type": "platform_download_and_extract",
+				"target": "tmp",
+				"windows": {
+					"url": "http://mirror.easyname.ch/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.zip"
+				},
+				"unix": {
+					"url": "http://mirror.easyname.ch/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz"
+				}
+			},
+			{
+				"type": "keep",
+				"file": "tmp/apache-maven-3.6.1",
+				"as": ""
+			},
+			{
+				"type": "delete",
+				"file": "tmp"
+			}
+		],
+		"shortcuts": {
+			"mvn": {
+				"target": "bin/mvn",
+				"target_winext": ".cmd"
+			},
+			"mvnDebug": {
+				"target": "bin/mvnDebug",
+				"target_winext": ".cmd"
+			}
+		}
+	},
+	{
 		"name": "openjdk",
 		"display_name": "OpenJDK (Java)",
-		"aliases": ["java", "jdk", "default-jdk"],
+		"aliases": [
+			"java",
+			"jdk",
+			"default-jdk"
+		],
 		"version": "12.0.1",
 		"prerequisites": [
 			{
@@ -108,65 +159,11 @@
 		}
 	},
 	{
-		"name": "maven",
-		"aliases": ["mvn"],
-		"version": "3.6.1",
-		"prerequisites": [
-			{
-				"type": "command_not_found",
-				"value": "mvn"
-			}
-		],
-		"dependencies": [
-			"openjdk"
-		],
-		"install": [
-			{
-				"type": "platform_download_and_extract",
-				"target": "tmp",
-				"windows": {
-					"url": "http://mirror.easyname.ch/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.zip"
-				},
-				"unix": {
-					"url": "http://mirror.easyname.ch/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz"
-				}
-			},
-			{
-				"type": "keep",
-				"file": "tmp/apache-maven-3.6.1",
-				"as": ""
-			},
-			{
-				"type": "delete",
-				"file": "tmp"
-			}
-		],
-		"shortcuts": {
-			"mvn": {
-				"target": "bin/mvn",
-				"target_winext": ".cmd"
-			},
-			"mvnDebug": {
-				"target": "bin/mvnDebug",
-				"target_winext": ".cmd"
-			}
-		}
-	},
-	{
-		"name": "php-mbstring",
-		"display_name": "PHP MBString Extension",
-		"aliases": ["mbstring"],
-		"install": [
-			{
-				"type": "enable_php_extension",
-				"name": "mbstring"
-			}
-		]
-	},
-	{
 		"name": "php-gmp",
 		"display_name": "PHP GMP Extension",
-		"aliases": ["gmp"],
+		"aliases": [
+			"gmp"
+		],
 		"install": [
 			{
 				"type": "install_unix_package",
@@ -175,6 +172,19 @@
 			{
 				"type": "enable_php_extension",
 				"name": "gmp"
+			}
+		]
+	},
+	{
+		"name": "php-mbstring",
+		"display_name": "PHP MBString Extension",
+		"aliases": [
+			"mbstring"
+		],
+		"install": [
+			{
+				"type": "enable_php_extension",
+				"name": "mbstring"
 			}
 		]
 	},
