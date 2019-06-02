@@ -159,6 +159,23 @@
 		}
 	},
 	{
+		"name": "php-gd",
+		"display_name": "PHP GD Extension",
+		"aliases": [
+			"gd"
+		],
+		"install": [
+			{
+				"type": "install_unix_package",
+				"name": "php-gd"
+			},
+			{
+				"type": "enable_php_extension",
+				"name": "gd"
+			}
+		]
+	},
+	{
 		"name": "php-gmp",
 		"display_name": "PHP GMP Extension",
 		"aliases": [
