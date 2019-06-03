@@ -82,6 +82,46 @@
 		}
 	},
 	{
+		"name": "nose",
+		"version": "0.1.0",
+		"install": [
+			{
+				"type": "platform_download_and_extract",
+				"target": "tmp",
+				"windows": {
+					"url": "https://github.com/hell-sh/Nose/archive/v0.1.0.zip"
+				},
+				"unix": {
+					"url": "https://github.com/hell-sh/Nose/archive/v0.1.0.tar.gz"
+				}
+			},
+			{
+				"type": "keep",
+				"file": "tmp/Nose-0.1.0/src",
+				"as": "src"
+			},
+			{
+				"type": "keep",
+				"file": "tmp/Nose-0.1.0/nose",
+				"as": "nose"
+			},
+			{
+				"type": "delete",
+				"file": "tmp"
+			}
+		],
+		"shortcuts": {
+			"nose": {
+				"target": "php",
+				"target_arguments": [
+					{
+						"path": "nose"
+					}
+				]
+			}
+		}
+	},
+	{
 		"name": "openjdk",
 		"display_name": "OpenJDK (Java)",
 		"aliases": [
