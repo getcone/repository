@@ -275,6 +275,9 @@
 		"name": "utopiascript",
 		"display_name": "UtopiaScript",
 		"version": "dev-master",
+		"dependencies": [
+			"composer"
+		],
 		"install": [
 			{
 				"type": "platform_download_and_extract",
