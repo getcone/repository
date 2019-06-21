@@ -270,5 +270,41 @@
 				]
 			}
 		}
+	},
+	{
+		"name": "utopiascript",
+		"display_name": "UtopiaScript",
+		"version": "dev-master",
+		"install": [
+			{
+				"type": "platform_download_and_extract",
+				"target": "tmp",
+				"windows": {
+					"url": "https://github.com/timmyrs/UtopiaScript/archive/master.zip"
+				},
+				"unix": {
+					"url": "https://github.com/timmyrs/UtopiaScript/archive/master.tar.gz"
+				}
+			},
+			{
+				"type": "keep",
+				"file": "tmp/UtopiaScript-master",
+				"as": ""
+			},
+			{
+				"type": "delete",
+				"file": "tmp"
+			}
+		],
+		"shortcuts": {
+			"utopia": {
+				"target": "php",
+				"target_arguments": [
+					{
+						"path": "utopia"
+					}
+				]
+			}
+		}
 	}
 ]
