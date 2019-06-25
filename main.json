@@ -83,26 +83,26 @@
 	},
 	{
 		"name": "nose",
-		"version": "1.0.1",
+		"version": "1.1.0",
 		"install": [
 			{
 				"type": "platform_download_and_extract",
 				"target": "tmp",
 				"windows": {
-					"url": "https://github.com/hell-sh/Nose/archive/v1.0.1.zip"
+					"url": "https://github.com/hell-sh/Nose/archive/v1.1.0.zip"
 				},
 				"unix": {
-					"url": "https://github.com/hell-sh/Nose/archive/v1.0.1.tar.gz"
+					"url": "https://github.com/hell-sh/Nose/archive/v1.1.0.tar.gz"
 				}
 			},
 			{
 				"type": "keep",
-				"file": "tmp/Nose-1.0.1/src",
+				"file": "tmp/Nose-1.1.0/src",
 				"as": "src"
 			},
 			{
 				"type": "keep",
-				"file": "tmp/Nose-1.0.1/nose",
+				"file": "tmp/Nose-1.1.0/nose",
 				"as": "nose"
 			},
 			{
