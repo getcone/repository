@@ -278,6 +278,9 @@
 	{
 		"name": "utopiascript",
 		"display_name": "UtopiaScript",
+		"risky_aliases": [
+			"utopia"
+		],
 		"version": "dev-master",
 		"dependencies": [
 			"composer"
