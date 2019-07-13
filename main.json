@@ -1,320 +1,324 @@
-[
-	{
-		"name": "composer",
-		"version": "1.8.5",
-		"prerequisites": [
-			{
-				"type": "command_not_found",
-				"value": "composer"
-			}
-		],
-		"install": [
-			{
-				"type": "download",
-				"target": "composer.phar",
-				"url": "https://getcomposer.org/download/1.8.5/composer.phar",
-				"hash": {
-					"sha256": "4e4c1cd74b54a26618699f3190e6f5fc63bb308b13fa660f71f2a2df047c0e17"
+{
+	"name": "Cone Main Repository",
+	"cone_min": "0.9.0",
+	"packages": [
+		{
+			"name": "composer",
+			"version": "1.8.5",
+			"prerequisites": [
+				{
+					"type": "command_not_found",
+					"value": "composer"
 				}
-			},
-			{
-				"type": "keep",
-				"file": "composer.phar",
-				"as": "composer.phar"
-			}
-		],
-		"shortcuts": {
-			"composer": {
-				"target": "php",
-				"target_arguments": [
-					{
-						"path": "composer.phar"
-					}
-				]
-			}
-		}
-	},
-	{
-		"name": "maven",
-		"aliases": [
-			"mvn"
-		],
-		"version": "3.6.1",
-		"prerequisites": [
-			{
-				"type": "command_not_found",
-				"value": "mvn"
-			}
-		],
-		"dependencies": [
-			"openjdk"
-		],
-		"install": [
-			{
-				"type": "platform_download_and_extract",
-				"target": "tmp",
-				"windows": {
-					"url": "http://mirror.easyname.ch/apache/maven/maven-3/{version}/binaries/apache-maven-{version}-bin.zip"
-				},
-				"unix": {
-					"url": "http://mirror.easyname.ch/apache/maven/maven-3/{version}/binaries/apache-maven-{version}-bin.tar.gz"
-				}
-			},
-			{
-				"type": "keep",
-				"file": "tmp/apache-maven-{version}",
-				"as": ""
-			},
-			{
-				"type": "delete",
-				"file": "tmp"
-			}
-		],
-		"shortcuts": {
-			"mvn": {
-				"target": "bin/mvn",
-				"target_winext": ".cmd"
-			},
-			"mvnDebug": {
-				"target": "bin/mvnDebug",
-				"target_winext": ".cmd"
-			}
-		}
-	},
-	{
-		"name": "nose",
-		"version": "1.1.0",
-		"install": [
-			{
-				"type": "platform_download_and_extract",
-				"target": "tmp",
-				"windows": {
-					"url": "https://github.com/hell-sh/Nose/archive/v{version}.zip"
-				},
-				"unix": {
-					"url": "https://github.com/hell-sh/Nose/archive/v{version}.tar.gz"
-				}
-			},
-			{
-				"type": "keep",
-				"file": "tmp/Nose-{version}/src",
-				"as": "src"
-			},
-			{
-				"type": "keep",
-				"file": "tmp/Nose-{version}/nose",
-				"as": "nose"
-			},
-			{
-				"type": "delete",
-				"file": "tmp"
-			}
-		],
-		"shortcuts": {
-			"nose": {
-				"target": "php",
-				"target_arguments": [
-					{
-						"path": "nose"
-					}
-				]
-			}
-		}
-	},
-	{
-		"name": "openjdk",
-		"display_name": "OpenJDK (Java)",
-		"aliases": [
-			"java",
-			"jdk",
-			"default-jdk"
-		],
-		"version": "12.0.1",
-		"prerequisites": [
-			{
-				"type": "command_not_found",
-				"value": "java"
-			}
-		],
-		"install": [
-			{
-				"type": "platform_download_and_extract",
-				"target": "tmp",
-				"windows": {
-					"url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_windows-x64_bin.zip",
+			],
+			"install": [
+				{
+					"type": "download",
+					"target": "composer.phar",
+					"url": "https://getcomposer.org/download/1.8.5/composer.phar",
 					"hash": {
-						"sha256": "fc7d9eee3c09ea6548b00ca25dbf34a348b3942c815405a1428e0bfef268d08d"
+						"sha256": "4e4c1cd74b54a26618699f3190e6f5fc63bb308b13fa660f71f2a2df047c0e17"
 					}
 				},
-				"macos": {
-					"url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_osx-x64_bin.tar.gz",
-					"hash": {
-						"sha256": "cba6f42f82496f62c51fb544e243d440984d442bdc906550a30428d8be6189e5"
-					}
-				},
-				"linux": {
-					"url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_linux-x64_bin.tar.gz",
-					"hash": {
-						"sha256": "151eb4ec00f82e5e951126f572dc9116104c884d97f91be14ec11e85fc2dd626"
-					}
+				{
+					"type": "keep",
+					"file": "composer.phar",
+					"as": "composer.phar"
 				}
-			},
-			{
-				"type": "keep",
-				"file": "tmp/jdk-12.0.1",
-				"as": ""
-			},
-			{
-				"type": "delete",
-				"file": "tmp"
-			}
-		],
-		"shortcuts": {
-			"java": {
-				"target": "bin/java",
-				"target_winext": ".exe"
-			},
-			"javaw": {
-				"target": "bin/javaw",
-				"target_winext": ".exe"
-			},
-			"keytool": {
-				"target": "bin/keytool",
-				"target_winext": ".exe"
+			],
+			"shortcuts": {
+				"composer": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "composer.phar"
+						}
+					]
+				}
 			}
 		},
-		"variables": {
-			"JAVA_HOME": {
-				"path": ""
+		{
+			"name": "maven",
+			"aliases": [
+				"mvn"
+			],
+			"version": "3.6.1",
+			"prerequisites": [
+				{
+					"type": "command_not_found",
+					"value": "mvn"
+				}
+			],
+			"dependencies": [
+				"openjdk"
+			],
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "http://mirror.easyname.ch/apache/maven/maven-3/{version}/binaries/apache-maven-{version}-bin.zip"
+					},
+					"unix": {
+						"url": "http://mirror.easyname.ch/apache/maven/maven-3/{version}/binaries/apache-maven-{version}-bin.tar.gz"
+					}
+				},
+				{
+					"type": "keep",
+					"file": "tmp/apache-maven-{version}",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"mvn": {
+					"target": "bin/mvn",
+					"target_winext": ".cmd"
+				},
+				"mvnDebug": {
+					"target": "bin/mvnDebug",
+					"target_winext": ".cmd"
+				}
 			}
 		},
-		"file_associations": {
-			"jar": "bin/java.exe -jar %1"
-		}
-	},
-	{
-		"name": "php-gd",
-		"display_name": "PHP GD Extension",
-		"aliases": [
-			"gd"
-		],
-		"install": [
-			{
-				"type": "install_unix_package",
-				"name": "php-gd"
-			},
-			{
-				"type": "enable_php_extension",
-				"name": "gd"
-			}
-		]
-	},
-	{
-		"name": "php-gmp",
-		"display_name": "PHP GMP Extension",
-		"aliases": [
-			"gmp"
-		],
-		"install": [
-			{
-				"type": "install_unix_package",
-				"name": "php-gmp"
-			},
-			{
-				"type": "enable_php_extension",
-				"name": "gmp"
-			}
-		]
-	},
-	{
-		"name": "php-mbstring",
-		"display_name": "PHP MBString Extension",
-		"aliases": [
-			"mbstring"
-		],
-		"install": [
-			{
-				"type": "enable_php_extension",
-				"name": "mbstring"
-			}
-		]
-	},
-	{
-		"name": "tcproc",
-		"display_name": "TCProc",
-		"version": "1.0.1",
-		"install": [
-			{
-				"type": "platform_download_and_extract",
-				"target": "tmp",
-				"windows": {
-					"url": "https://github.com/hell-sh/tcproc/archive/v{version}.zip"
+		{
+			"name": "nose",
+			"version": "1.1.0",
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://github.com/hell-sh/Nose/archive/v{version}.zip"
+					},
+					"unix": {
+						"url": "https://github.com/hell-sh/Nose/archive/v{version}.tar.gz"
+					}
 				},
-				"unix": {
-					"url": "https://github.com/hell-sh/tcproc/archive/v{version}.tar.gz"
+				{
+					"type": "keep",
+					"file": "tmp/Nose-{version}/src",
+					"as": "src"
+				},
+				{
+					"type": "keep",
+					"file": "tmp/Nose-{version}/nose",
+					"as": "nose"
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"nose": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "nose"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "openjdk",
+			"display_name": "OpenJDK (Java)",
+			"aliases": [
+				"java",
+				"jdk",
+				"default-jdk"
+			],
+			"version": "12.0.1",
+			"prerequisites": [
+				{
+					"type": "command_not_found",
+					"value": "java"
+				}
+			],
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_windows-x64_bin.zip",
+						"hash": {
+							"sha256": "fc7d9eee3c09ea6548b00ca25dbf34a348b3942c815405a1428e0bfef268d08d"
+						}
+					},
+					"macos": {
+						"url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_osx-x64_bin.tar.gz",
+						"hash": {
+							"sha256": "cba6f42f82496f62c51fb544e243d440984d442bdc906550a30428d8be6189e5"
+						}
+					},
+					"linux": {
+						"url": "https://download.java.net/java/GA/jdk12.0.1/69cfe15208a647278a19ef0990eea691/12/GPL/openjdk-12.0.1_linux-x64_bin.tar.gz",
+						"hash": {
+							"sha256": "151eb4ec00f82e5e951126f572dc9116104c884d97f91be14ec11e85fc2dd626"
+						}
+					}
+				},
+				{
+					"type": "keep",
+					"file": "tmp/jdk-12.0.1",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"java": {
+					"target": "bin/java",
+					"target_winext": ".exe"
+				},
+				"javaw": {
+					"target": "bin/javaw",
+					"target_winext": ".exe"
+				},
+				"keytool": {
+					"target": "bin/keytool",
+					"target_winext": ".exe"
 				}
 			},
-			{
-				"type": "keep",
-				"file": "tmp/tcproc-{version}",
-				"as": ""
-			},
-			{
-				"type": "delete",
-				"file": "tmp"
-			}
-		],
-		"shortcuts": {
-			"tcproc": {
-				"target": "php",
-				"target_arguments": [
-					{
-						"path": "tcproc.php"
-					}
-				]
-			}
-		}
-	},
-	{
-		"name": "utopiascript",
-		"display_name": "UtopiaScript",
-		"risky_aliases": [
-			"utopia"
-		],
-		"version": "dev-master",
-		"dependencies": [
-			"composer"
-		],
-		"install": [
-			{
-				"type": "platform_download_and_extract",
-				"target": "tmp",
-				"windows": {
-					"url": "https://github.com/timmyrs/UtopiaScript/archive/master.zip"
-				},
-				"unix": {
-					"url": "https://github.com/timmyrs/UtopiaScript/archive/master.tar.gz"
+			"variables": {
+				"JAVA_HOME": {
+					"path": ""
 				}
 			},
-			{
-				"type": "keep",
-				"file": "tmp/UtopiaScript-master",
-				"as": ""
-			},
-			{
-				"type": "delete",
-				"file": "tmp"
+			"file_associations": {
+				"jar": "bin/java.exe -jar %1"
 			}
-		],
-		"shortcuts": {
-			"utopia": {
-				"target": "php",
-				"target_arguments": [
-					{
-						"path": "utopia"
+		},
+		{
+			"name": "php-gd",
+			"display_name": "PHP GD Extension",
+			"aliases": [
+				"gd"
+			],
+			"install": [
+				{
+					"type": "install_unix_package",
+					"name": "php-gd"
+				},
+				{
+					"type": "enable_php_extension",
+					"name": "gd"
+				}
+			]
+		},
+		{
+			"name": "php-gmp",
+			"display_name": "PHP GMP Extension",
+			"aliases": [
+				"gmp"
+			],
+			"install": [
+				{
+					"type": "install_unix_package",
+					"name": "php-gmp"
+				},
+				{
+					"type": "enable_php_extension",
+					"name": "gmp"
+				}
+			]
+		},
+		{
+			"name": "php-mbstring",
+			"display_name": "PHP MBString Extension",
+			"aliases": [
+				"mbstring"
+			],
+			"install": [
+				{
+					"type": "enable_php_extension",
+					"name": "mbstring"
+				}
+			]
+		},
+		{
+			"name": "tcproc",
+			"display_name": "TCProc",
+			"version": "1.0.1",
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://github.com/hell-sh/tcproc/archive/v{version}.zip"
+					},
+					"unix": {
+						"url": "https://github.com/hell-sh/tcproc/archive/v{version}.tar.gz"
 					}
-				]
+				},
+				{
+					"type": "keep",
+					"file": "tmp/tcproc-{version}",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"tcproc": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "tcproc.php"
+						}
+					]
+				}
+			}
+		},
+		{
+			"name": "utopiascript",
+			"display_name": "UtopiaScript",
+			"risky_aliases": [
+				"utopia"
+			],
+			"version": "dev-master",
+			"dependencies": [
+				"composer"
+			],
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://github.com/timmyrs/UtopiaScript/archive/master.zip"
+					},
+					"unix": {
+						"url": "https://github.com/timmyrs/UtopiaScript/archive/master.tar.gz"
+					}
+				},
+				{
+					"type": "keep",
+					"file": "tmp/UtopiaScript-master",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"utopia": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "utopia"
+						}
+					]
+				}
 			}
 		}
-	}
-]
+	]
+}

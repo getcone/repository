@@ -6,7 +6,7 @@ foreach(scandir(".") as $file)
 		continue;
 	}
 	$json = json_decode(file_get_contents($file), true);
-	usort($json, function($a, $b)
+	usort($json["packages"], function($a, $b)
 	{
 		return strcmp($a["name"], $b["name"]);
 	});
