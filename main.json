@@ -1,6 +1,6 @@
 {
 	"name": "Cone Main Repository",
-	"cone_min": "0.9.0",
+	"cone_min": "0.10.0",
 	"packages": [
 		{
 			"name": "composer",
@@ -34,6 +34,108 @@
 							"path": "composer.phar"
 						}
 					]
+				}
+			}
+		},
+		{
+			"name": "ffmpeg",
+			"display_name": "ffmpeg",
+			"aliases": [
+				"ffprobe",
+				"ffplay"
+			],
+			"version": "4.2",
+			"prerequisites": [
+				{
+					"type": "command_not_found",
+					"value": "ffmpeg"
+				}
+			],
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows_x64": {
+						"url": "https://ffmpeg.zeranoe.com/builds/win64/static/ffmpeg-{version}-win64-static.zip"
+					},
+					"windows_x86": {
+						"url": "https://ffmpeg.zeranoe.com/builds/win32/static/ffmpeg-{version}-win32-static.zip"
+					},
+					"macos": {
+						"url": "https://ffmpeg.zeranoe.com/builds/macos64/static/ffmpeg-{version}-macos64-static.zip"
+					},
+					"linux_x64": {
+						"url": "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz"
+					},
+					"linux_x86": {
+						"url": "https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-i686-static.tar.xz"
+					}
+				},
+				{
+					"type": "platform_switch",
+					"windows_x64": [
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-{version}-win64-static/bin",
+							"as": ""
+						}
+					],
+					"windows_x86": [
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-{version}-win32-static/bin",
+							"as": ""
+						}
+					],
+					"macos": [
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-{version}-macos64-static/bin",
+							"as": ""
+						}
+					],
+					"linux_x64": [
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-release-amd64-static/ffmpeg",
+							"as": "ffmpeg"
+						},
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-release-amd64-static/ffprobe",
+							"as": "ffprobe"
+						}
+					],
+					"linux_x86": [
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-release-i686-static/ffmpeg",
+							"as": "ffmpeg"
+						},
+						{
+							"type": "keep",
+							"file": "tmp/ffmpeg-release-i686-static/ffprobe",
+							"as": "ffprobe"
+						}
+					]
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"ffmpeg": {
+					"target": "ffmpeg",
+					"target_winext": ".exe"
+				},
+				"ffprobe": {
+					"target": "ffprobe",
+					"target_winext": ".exe"
+				},
+				"ffplay": {
+					"target": "ffplay",
+					"target_winext": ".exe"
 				}
 			}
 		},
