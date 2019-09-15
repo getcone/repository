@@ -345,6 +345,16 @@
 			]
 		},
 		{
+			"name": "php-sockets",
+			"display_name": "PHP Sockets Extension",
+			"install": [
+				{
+					"type": "enable_php_extension",
+					"name": "sockets"
+				}
+			]
+		},
+		{
 			"name": "tcproc",
 			"display_name": "TCProc",
 			"version": "1.0.1",
