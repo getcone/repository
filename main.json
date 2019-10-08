@@ -298,6 +298,20 @@
 			}
 		},
 		{
+			"name": "php-curl",
+			"display_name": "PHP cURL Extension",
+			"install": [
+				{
+					"type": "install_unix_package",
+					"name": "php-curl"
+				},
+				{
+					"type": "enable_php_extension",
+					"name": "curl"
+				}
+			]
+		},
+		{
 			"name": "php-gd",
 			"display_name": "PHP GD Extension",
 			"aliases": [
