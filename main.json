@@ -419,10 +419,10 @@
 					"type": "platform_download_and_extract",
 					"target": "tmp",
 					"windows": {
-						"url": "https://github.com/timmyrs/UtopiaScript/archive/master.zip"
+						"url": "https://github.com/timmyRS/UtopiaScript/archive/master.zip"
 					},
 					"unix": {
-						"url": "https://github.com/timmyrs/UtopiaScript/archive/master.tar.gz"
+						"url": "https://github.com/timmyRS/UtopiaScript/archive/master.tar.gz"
 					}
 				},
 				{
