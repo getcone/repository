@@ -38,6 +38,93 @@
 			}
 		},
 		{
+			"name": "doxygen",
+			"aliases": [
+				"doxyindexer",
+				"doxywizard"
+			],
+			"version": "1.8.16",
+			"prerequisites": [
+				{
+					"type": "command_not_found",
+					"value": "doxygen"
+				}
+			],
+			"install": [
+				{
+					"type": "platform_switch",
+					"windows": [
+						{
+							"type": "platform_download_and_extract",
+							"target": "tmp",
+							"windows_x64": {
+								"url": "http://doxygen.nl/files/doxygen-{version}.windows.x64.bin.zip"
+							},
+							"windows_x86": {
+								"url": "http://doxygen.nl/files/doxygen-{version}.windows.bin.zip"
+							}
+						},
+						{
+							"type": "keep",
+							"file": "tmp",
+							"as": ""
+						}
+					],
+					"macos": [
+						{
+							"type": "download",
+							"target": "Doxygen.dmg",
+							"url": "http://doxygen.nl/files/Doxygen-1.8.16.dmg"
+						},
+						{
+							"type": "keep",
+							"file": "Doxygen.dmg",
+							"as": "Doxygen.dmg"
+						}
+					],
+					"linux": [
+						{
+							"type": "download",
+							"target": "doxygen.tar.gz",
+							"url": "http://doxygen.nl/files/doxygen-1.8.16.linux.bin.tar.gz"
+						},
+						{
+							"type": "extract",
+							"file": "doxygen.tar.gz",
+							"target": "tmp"
+						},
+						{
+							"type": "delete",
+							"file": "doxygen.tar.gz"
+						},
+						{
+							"type": "keep",
+							"file": "tmp/doxygen-{version}/bin",
+							"as": ""
+						},
+						{
+							"type": "delete",
+							"file": "tmp"
+						}
+					]
+				}
+			],
+			"shortcuts": {
+				"doxygen": {
+					"target": "doxygen",
+					"target_winext": ".exe"
+				},
+				"doxyindexer": {
+					"target": "doxyindexer",
+					"target_winext": ".exe"
+				},
+				"doxywizard": {
+					"target": "doxywizard",
+					"target_winext": ".exe"
+				}
+			}
+		},
+		{
 			"name": "ffmpeg",
 			"display_name": "ffmpeg",
 			"aliases": [
