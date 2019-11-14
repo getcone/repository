@@ -131,7 +131,7 @@
 				"ffprobe",
 				"ffplay"
 			],
-			"version": "4.2",
+			"version": "4.2.1",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
