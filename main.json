@@ -456,6 +456,93 @@
 			]
 		},
 		{
+			"name": "phpcraft-toolbox",
+			"risky_aliases": [
+				"toolbox"
+			],
+			"display_name": "Phpcraft Toolbox",
+			"version": "1.0.0",
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://github.com/Phpcraft/toolbox/archive/{version}.zip"
+					},
+					"unix": {
+						"url": "https://github.com/Phpcraft/toolbox/archive/{version}.tar.gz"
+					}
+				},
+				{
+					"type": "keep",
+					"file": "tmp/toolbox-{version}",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"listping": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "listping.php"
+						}
+					]
+				},
+				"snbt": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "snbt.php"
+						}
+					]
+				},
+				"nbt": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "nbt.php"
+						}
+					]
+				},
+				"hex2bin": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "hex2bin.php"
+						}
+					]
+				},
+				"bin2hex": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "bin2hex.php"
+						}
+					]
+				},
+				"uuid": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "uuid.php"
+						}
+					]
+				},
+				"packets": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "packets.php"
+						}
+					]
+				}
+			}
+		},
+		{
 			"name": "tcproc",
 			"display_name": "TCProc",
 			"version": "1.0.1",
