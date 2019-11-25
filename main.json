@@ -3,6 +3,44 @@
 	"cone_min": "0.10.0",
 	"packages": [
 		{
+			"name": "cipherfinder",
+			"version": "0.1.0",
+			"dependencies": [
+				"composer"
+			],
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://github.com/hell-sh/cipherfinder/archive/v{version}.zip"
+					},
+					"unix": {
+						"url": "https://github.com/hell-sh/cipherfinder/archive/v{version}.tar.gz"
+					}
+				},
+				{
+					"type": "keep",
+					"file": "tmp/cipherfinder-{version}",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"cipherfinder": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "cipherfinder.php"
+						}
+					]
+				}
+			}
+		},
+		{
 			"name": "composer",
 			"version": "1.9.1",
 			"prerequisites": [
