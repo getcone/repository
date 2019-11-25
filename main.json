@@ -462,6 +462,9 @@
 			],
 			"display_name": "Phpcraft Toolbox",
 			"version": "1.0.0",
+			"dependencies": [
+				"composer"
+			],
 			"install": [
 				{
 					"type": "platform_download_and_extract",
