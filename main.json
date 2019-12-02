@@ -269,7 +269,7 @@
 			"aliases": [
 				"mvn"
 			],
-			"version": "3.6.2",
+			"version": "3.6.3",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
