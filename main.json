@@ -73,7 +73,13 @@
 						}
 					]
 				}
-			}
+			},
+			"crawl_data": [
+				{
+					"url": "https://getcomposer.org/download/",
+					"match": ">Latest: v{version}</span>"
+				}
+			]
 		},
 		{
 			"name": "doxygen",
@@ -160,7 +166,13 @@
 					"target": "doxywizard",
 					"target_winext": ".exe"
 				}
-			}
+			},
+			"crawl_data": [
+				{
+					"url": "http://www.doxygen.nl/download.html",
+					"match": "The latest version of doxygen is {version} (release date "
+				}
+			]
 		},
 		{
 			"name": "ffmpeg",
@@ -262,7 +274,13 @@
 					"target": "ffplay",
 					"target_winext": ".exe"
 				}
-			}
+			},
+			"crawl_data": [
+				{
+					"url": "https://www.ffmpeg.org/download.html",
+					"match": "<small>ffmpeg-{version}.tar.bz2</small>"
+				}
+			]
 		},
 		{
 			"name": "maven",
@@ -309,7 +327,13 @@
 					"target": "bin/mvnDebug",
 					"target_winext": ".cmd"
 				}
-			}
+			},
+			"crawl_data": [
+				{
+					"url": "https://maven.apache.org/download.cgi",
+					"match": ">Downloading Apache Maven {version}</h2>"
+				}
+			]
 		},
 		{
 			"name": "mcpackr",
@@ -453,7 +477,17 @@
 			},
 			"file_associations": {
 				"jar": "bin/java.exe -jar %1"
-			}
+			},
+			"crawl_data": [
+				{
+					"url": "https://jdk.java.net/",
+					"match": "<div class=\"about\">GA Releases</div><div class=\"link\"><a href=\"./13/\">JDK 13</a></div>"
+				},
+				{
+					"url": "https://jdk.java.net/13/",
+					"match": "<h1>JDK {version} General-Availability Release</h1>"
+				}
+			]
 		},
 		{
 			"name": "php-curl",
