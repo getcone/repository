@@ -5,6 +5,7 @@
 		{
 			"name": "cipherfinder",
 			"version": "0.1.0",
+			"homepage": "https://github.com/hell-sh/cipherfinder",
 			"dependencies": [
 				"composer"
 			],
@@ -43,6 +44,7 @@
 		{
 			"name": "composer",
 			"version": "1.9.1",
+			"homepage": "https://getcomposer.org/",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
@@ -88,6 +90,7 @@
 				"doxywizard"
 			],
 			"version": "1.8.16",
+			"homepage": "http://www.doxygen.nl/",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
@@ -176,12 +179,13 @@
 		},
 		{
 			"name": "ffmpeg",
-			"display_name": "ffmpeg",
+			"display_name": "FFmpeg",
 			"aliases": [
 				"ffprobe",
 				"ffplay"
 			],
 			"version": "4.2.1",
+			"homepage": "https://www.ffmpeg.org/",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
@@ -288,6 +292,7 @@
 				"mvn"
 			],
 			"version": "3.6.3",
+			"homepage": "https://maven.apache.org/",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
@@ -339,6 +344,7 @@
 			"name": "mcpackr",
 			"display_name": "MCPackr",
 			"version": "1.2.0",
+			"homepage": "https://github.com/timmyRS/MCPackr",
 			"dependencies": [
 				"openjdk"
 			],
@@ -371,6 +377,7 @@
 		{
 			"name": "nose",
 			"version": "1.1.0",
+			"homepage": "https://github.com/hell-sh/Nose",
 			"install": [
 				{
 					"type": "platform_download_and_extract",
@@ -417,6 +424,7 @@
 				"default-jdk"
 			],
 			"version": "13.0.1",
+			"homepage": "https://openjdk.java.net/",
 			"prerequisites": [
 				{
 					"type": "command_not_found",
@@ -567,6 +575,7 @@
 			],
 			"display_name": "Phpcraft Toolbox",
 			"version": "1.0.1",
+			"homepage": "https://github.com/Phpcraft/toolbox",
 			"dependencies": [
 				"composer"
 			],
@@ -652,8 +661,9 @@
 		},
 		{
 			"name": "tcproc",
-			"display_name": "TCProc",
+			"display_name": "tcproc",
 			"version": "1.0.1",
+			"homepage": "https://github.com/hell-sh/tcproc",
 			"install": [
 				{
 					"type": "platform_download_and_extract",
@@ -693,6 +703,7 @@
 				"utopia"
 			],
 			"version": "dev-master",
+			"homepage": "https://github.com/timmyRS/UtopiaScript",
 			"dependencies": [
 				"composer"
 			],
