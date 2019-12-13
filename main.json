@@ -574,10 +574,11 @@
 				"toolbox"
 			],
 			"display_name": "Phpcraft Toolbox",
-			"version": "1.0.1",
+			"version": "1.1.0",
 			"homepage": "https://github.com/Phpcraft/toolbox",
 			"dependencies": [
-				"composer"
+				"composer",
+				"php-sockets"
 			],
 			"install": [
 				{
@@ -646,6 +647,14 @@
 					"target_arguments": [
 						{
 							"path": "uuid.php"
+						}
+					]
+				},
+				"lanworlds": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "lanworlds.php"
 						}
 					]
 				},
