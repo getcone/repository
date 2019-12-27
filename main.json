@@ -375,6 +375,46 @@
 			}
 		},
 		{
+			"name": "md2png",
+			"display_name": "md2png",
+			"version": "1.0",
+			"homepage": "https://github.com/hell-sh/md2png",
+			"dependencies": [
+				"composer"
+			],
+			"install": [
+				{
+					"type": "platform_download_and_extract",
+					"target": "tmp",
+					"windows": {
+						"url": "https://github.com/hell-sh/md2png/archive/v{version}.zip"
+					},
+					"unix": {
+						"url": "https://github.com/hell-sh/md2png/archive/v{version}.tar.gz"
+					}
+				},
+				{
+					"type": "keep",
+					"file": "tmp/md2png-{version}",
+					"as": ""
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"md2png": {
+					"target": "php",
+					"target_arguments": [
+						{
+							"path": "md2png.php"
+						}
+					]
+				}
+			}
+		},
+		{
 			"name": "nose",
 			"version": "1.1.0",
 			"homepage": "https://github.com/hell-sh/Nose",
