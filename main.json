@@ -782,7 +782,7 @@
 					"target": "php",
 					"target_arguments": [
 						{
-							"path": "utopia"
+							"path": "utopia.php"
 						}
 					]
 				}
