@@ -89,7 +89,7 @@
 				"doxyindexer",
 				"doxywizard"
 			],
-			"version": "1.8.16",
+			"version": "1.8.17",
 			"homepage": "http://www.doxygen.nl/",
 			"prerequisites": [
 				{
@@ -121,7 +121,7 @@
 						{
 							"type": "download",
 							"target": "Doxygen.dmg",
-							"url": "http://doxygen.nl/files/Doxygen-1.8.16.dmg"
+							"url": "http://doxygen.nl/files/Doxygen-{version}.dmg"
 						},
 						{
 							"type": "keep",
@@ -133,7 +133,7 @@
 						{
 							"type": "download",
 							"target": "doxygen.tar.gz",
-							"url": "http://doxygen.nl/files/doxygen-1.8.16.linux.bin.tar.gz"
+							"url": "http://doxygen.nl/files/doxygen-{version}.linux.bin.tar.gz"
 						},
 						{
 							"type": "extract",
