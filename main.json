@@ -45,12 +45,6 @@
 			"name": "composer",
 			"version": "1.9.3",
 			"homepage": "https://getcomposer.org/",
-			"prerequisites": [
-				{
-					"type": "command_not_found",
-					"value": "composer"
-				}
-			],
 			"install": [
 				{
 					"type": "download",
@@ -91,12 +85,6 @@
 			],
 			"version": "1.8.17",
 			"homepage": "http://www.doxygen.nl/",
-			"prerequisites": [
-				{
-					"type": "command_not_found",
-					"value": "doxygen"
-				}
-			],
 			"install": [
 				{
 					"type": "platform_switch",
@@ -186,12 +174,6 @@
 			],
 			"version": "4.2.2",
 			"homepage": "https://www.ffmpeg.org/",
-			"prerequisites": [
-				{
-					"type": "command_not_found",
-					"value": "ffmpeg"
-				}
-			],
 			"install": [
 				{
 					"type": "platform_download_and_extract",
@@ -293,12 +275,6 @@
 			],
 			"version": "3.6.3",
 			"homepage": "https://maven.apache.org/",
-			"prerequisites": [
-				{
-					"type": "command_not_found",
-					"value": "mvn"
-				}
-			],
 			"dependencies": [
 				"openjdk"
 			],
@@ -465,12 +441,6 @@
 			],
 			"version": "13.0.2",
 			"homepage": "https://openjdk.java.net/",
-			"prerequisites": [
-				{
-					"type": "command_not_found",
-					"value": "java"
-				}
-			],
 			"install": [
 				{
 					"type": "platform_download_and_extract",
