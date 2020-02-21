@@ -1,6 +1,6 @@
 {
 	"name": "Cone Main Repository",
-	"cone_min": "0.10.0",
+	"cone_min": "1.1",
 	"packages": [
 		{
 			"name": "cipherfinder",
@@ -265,6 +265,65 @@
 				{
 					"url": "https://www.ffmpeg.org/download.html",
 					"match": "<small>ffmpeg-{version}.tar.bz2</small>"
+				}
+			]
+		},
+		{
+			"name": "junction",
+			"version": "1.07",
+			"homepage": "https://docs.microsoft.com/en-us/sysinternals/downloads/junction",
+			"prerequisites": [
+				{
+					"type": "os",
+					"windows": true
+				}
+			],
+			"install": [
+				{
+					"type": "download",
+					"target": "Junction.zip",
+					"url": "https://download.sysinternals.com/files/Junction.zip"
+				},
+				{
+					"type": "extract",
+					"file": "Junction.zip",
+					"target": "tmp"
+				},
+				{
+					"type": "delete",
+					"file": "Junction.zip"
+				},
+				{
+					"type": "platform_switch",
+					"windows_x64": [
+						{
+							"type": "keep",
+							"file": "tmp/junction64.exe",
+							"as": "junction.exe"
+						}
+					],
+					"other": [
+						{
+							"type": "keep",
+							"file": "tmp/junction.exe",
+							"as": "junction.exe"
+						}
+					]
+				},
+				{
+					"type": "delete",
+					"file": "tmp"
+				}
+			],
+			"shortcuts": {
+				"junction": {
+					"target": "junction.exe"
+				}
+			},
+			"crawl_data": [
+				{
+					"url": "https://docs.microsoft.com/en-us/sysinternals/downloads/junction",
+					"match": ">Junction v{version}</h1>"
 				}
 			]
 		},
