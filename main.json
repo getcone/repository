@@ -498,28 +498,28 @@
 				"jdk",
 				"default-jdk"
 			],
-			"version": "13.0.2",
+			"version": "14",
 			"homepage": "https://openjdk.java.net/",
 			"install": [
 				{
 					"type": "platform_download_and_extract",
 					"target": "tmp",
 					"linux": {
-						"url": "https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_linux-x64_bin.tar.gz",
+						"url": "https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_linux-x64_bin.tar.gz",
 						"hash": {
-							"sha256": "acc7a6aabced44e62ec3b83e3b5959df2b1aa6b3d610d58ee45f0c21a7821a71"
+							"sha256": "c7006154dfb8b66328c6475447a396feb0042608ee07a96956547f574a911c09"
 						}
 					},
 					"macos": {
-						"url": "https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_osx-x64_bin.tar.gz",
+						"url": "https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_osx-x64_bin.tar.gz",
 						"hash": {
-							"sha256": "08fd2db3a3ab6fb82bb9091a035f9ffe8ae56c31725f4e17d573e48c39ca10dd"
+							"sha256": "f3e7439e19ea22f71a96b5563e0e0967e7df1563f2f9d7922209793498ca4698"
 						}
 					},
 					"windows": {
-						"url": "https://download.java.net/java/GA/jdk13.0.2/d4173c853231432d94f001e99d882ca7/8/GPL/openjdk-13.0.2_windows-x64_bin.zip",
+						"url": "https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_windows-x64_bin.zip",
 						"hash": {
-							"sha256": "fab29dcfda6ca4af3a9b973ecdde61dafcd9b307cb9237c25d25b2633bb08084"
+							"sha256": "6b56c65c2ebb89eb361f47370359f88c4b87234dc073988a2c33e7d75c01e488"
 						}
 					}
 				},
@@ -558,10 +558,10 @@
 			"crawl_data": [
 				{
 					"url": "https://jdk.java.net/",
-					"match": "<div class=\"about\">GA Releases</div><div class=\"link\"><a href=\"./13/\">JDK 13</a></div>"
+					"match": "Ready for use: <a href=\"./14/\">JDK 14</a>"
 				},
 				{
-					"url": "https://jdk.java.net/13/",
+					"url": "https://jdk.java.net/14/",
 					"match": "<h1>JDK {version} General-Availability Release</h1>"
 				}
 			]
