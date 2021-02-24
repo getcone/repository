@@ -581,6 +581,16 @@
 			]
 		},
 		{
+			"name": "php-ffi",
+			"display_name": "PHP FFI Extension",
+			"install": [
+				{
+					"type": "enable_php_extension",
+					"name": "ffi"
+				}
+			]
+		},
+		{
 			"name": "php-gd",
 			"display_name": "PHP GD Extension",
 			"aliases": [
