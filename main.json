@@ -83,7 +83,7 @@
 				"doxyindexer",
 				"doxywizard"
 			],
-			"version": "1.8.17",
+			"version": "1.9.1",
 			"homepage": "http://www.doxygen.nl/",
 			"install": [
 				{
