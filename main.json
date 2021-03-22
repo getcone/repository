@@ -43,7 +43,7 @@
 		},
 		{
 			"name": "composer",
-			"version": "2.0.10",
+			"version": "2.0.11",
 			"homepage": "https://getcomposer.org/",
 			"install": [
 				{
@@ -51,7 +51,7 @@
 					"target": "composer.phar",
 					"url": "https://getcomposer.org/download/{version}/composer.phar",
 					"hash": {
-						"sha256": "92cb8b75268b23d1275e6d72dd398b29244505bea6d1f247ba126fd45a990645"
+						"sha256": "d6eee0d4637f4bd82bdae098fceda300dcb3ec35bf502604fbe7510933b8f952"
 					}
 				},
 				{
